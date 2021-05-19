@@ -1,0 +1,155 @@
+
+
+array calander =[01/01,02/01,...,30/12,31/12]
+    day = 0
+    DOWHILE (day<364)
+        2021calender(day) = ("")
+        day = day + 1
+    enddo
+end
+
+assignTask()        
+start
+	click "assign task"
+    open task form
+	print "Enter employee username" 
+    GET userName
+    print "enter task type"
+    GET taskType
+    print " enter the task due date dd/mm"
+    GET dueDate
+    assign = concat empName + " " + task type
+    calander(at dueDate insert(assign))
+end 
+
+addEvent()
+start
+    print"event date dd/mm?"
+    GET eventDate
+    print"name of the event?" 
+    GET eventName
+    empty_calender(at eventDate insert eventName)
+end
+
+submitSuvey()
+start
+    customerStatus = 0
+    click "do survey"
+    if( customerStatus < 1)
+        print"what is your name and surname?"
+        GET name
+        print"what is your age?"
+        GET age
+        print"what is your gender?"
+        GET gender
+        print"what is your your favourite product sold by Ayesha Beauty creations?"
+        GET favProduct
+        print"what do you like about us?"
+        GET customLike
+        print"what can we do to improve your experience with us?"
+        GET customExp
+        click "submit"
+        if(all fields completed)
+            add name, age, gender, favProduct, customLike, customExp to database
+            customerStatus = customerStatus + 1
+        else
+            print""please complete all fields"
+    else
+         print"sorry you have already completed a survey"
+        endif
+    endif
+end        
+
+addStaffAcc()
+start
+    print"add username"
+    GET userName
+    if (username is in employee database)
+        print"username taken"   
+    else
+        print"employee name? "
+        GET empName
+        print"employee surname?"
+        GET empSurname
+        print"employee position?"
+        GET empPosition
+        print"employee ID?"
+        GET empID
+        print"employee social security number?"
+        GET ssNumber
+        print"employee bank details?"
+        GET bankDetails
+        print"salary"
+        GET salary
+        print"date of employment"
+        GET DoE
+        print"does have employee admin permissons. Yes or No ?"
+        GET permissons
+        click"submit"
+        if (all field completed) AND permissons == "No"
+            add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
+            print"new employee added"
+            print"welcome to Ayesha Beauty creations " + username
+        elseif (all field completed) AND permissons == "Yes"
+            add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
+            print"new administrator added"
+            print"welcome to Ayesha Beauty creations " + username
+        else 
+            print"complete all fields"
+        endif
+    endif
+
+end
+    
+updateStockCodes()
+start
+    click "change stockcode"
+    print"enter code you want to change."
+    GET stockID
+    print"enter new code"
+    GET newID
+    if(newID in database)
+        print" code is already in use do you wish to continue may cause problems?"
+        GET changeAnswer 
+        if(changeAnswer == "Yes")
+            stockID = newID
+        else 
+            print"enter code you want to change."
+    else
+        stockID = newID
+        endif
+    endif
+end
+
+updateProductDescript()
+start
+    click"edit product"
+    print"This action requires administrative access"
+    print"enter admin password"
+    GET adminPass
+    if (adminPass is correct)
+            click in paragraph
+            edit description
+            click "finalise"
+    else
+        print"wrong password"
+    endif
+end
+
+addReview()
+start 
+    click"add review"
+    click"verify purchase"
+    print"ënter product verification code."
+    GET verifyCode
+    if(verifyCode is in product database )
+        rewardsPoints =rewardsPoints + 5
+        open review page
+        remove verifyCode from database
+        write review
+        click"submit"
+        add review to database 
+    else
+        print"invalid code"
+    endif
+end
