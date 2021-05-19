@@ -6,12 +6,12 @@ What we have is a website with a customer and staff side. On the customer side i
 On the staff side there will be an option to login as an employee or as an admin(only the boss and it people). Here the employees have a tool to schedule  other employees. In the scheduler they can set events like for example a meeting or team building event. Employees can also set deadline reminders in the scheduler . People who have access to admin accounts are able to set deadline for other employees they are also able to add or remove employees /their information. They can also add or remove products from the customer side of the site and mark somethibg in or out of stock.
 Note this *not* an online selling website they continue to sell through their distributors
 
-modules:staff,customers,scheduling,products
+modules: staff,customers,scheduling,products
 
-staff:This module groups togethere all the functions which are actions employees can take on the website.
-customer:This module groups togethere all the functions which are actions customers can take on the website.
-scheduling: This is all the functions that effect the scheduler.
-products: This is all the functions that effect product like updating product description.
+- staff:This module groups togethere all the functions which are actions employees can take on the website.
+- customer:This module groups togethere all the functions which are actions customers can take on the website.
+- scheduling: This is all the functions that effect the scheduler.
+- products: This is all the functions that effect product like updating product description.
 
 funtions:
 
