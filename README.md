@@ -19,29 +19,30 @@ funtions:
 - administrative login
 - add employee account to system(admin)
 - update employee details.
-remove employee account(admin)
-admin log out
-delete review(admin)
-Broadcast announcements (to both employees and customers)
-customer log in
-customer log out
-customer create account
-customer delete account
-submit review
-submit survey
-update stock codes.
-delete the stock codes.
-add product description.
-update product description
-add product
-remove product
-certify unique item code
-mark in stock
-mark out of stock
-decrease rewards points
-add event (eg. meeting)
-remove event
-move event
-add deadline
-remove deadline
-assign task
+- remove employee account(admin)
+- admin log out
+- delete review(admin)
+- Broadcast announcements (to both employees and customers)
+- customer log in
+- customer log out
+- customer create account
+- customer delete account
+- submit review
+- submit survey
+- update stock codes.
+- delete the stock codes.
+- add product description.
+- update product description
+- add product
+- remove product
+- certify unique item code
+- mark in stock
+- mark out of stock
+- decrease rewards points
+- add event (eg. meeting)
+- remove event
+- move event
+- add deadline
+- remove deadline
+- assign task
+ 
