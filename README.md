@@ -15,7 +15,7 @@ products: This is all the functions that effect product like updating product de
 
 funtions:
 
-employees login.
+employees login;
 administrative login
 add employee account to system(admin)
 update employee details.
