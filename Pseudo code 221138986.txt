@@ -1,0 +1,67 @@
+    customerLogin()
+  start
+       Print"userName"
+        Get  userName
+       Print"password"
+         Get  password
+  If(loginID ==entered userName and password==entered password) THEN
+        login successfull
+      ELSE
+         login failed
+  ENDIF
+
+
+
+       customerLogout
+  start
+        Prompt"user to logout"
+        get anwers Y or N
+        prompt" are you sure"
+        if( answer==Y) THEN
+        logout
+  ELSE
+         Don`t logout
+  ENDIF
+ 
+
+
+    updateEmployee
+  start
+       click"change details"
+       print"enter empoyee`s details you want to update/change"
+        get    details
+        print "enter new details"
+         get    newDetails
+       If(details do not already exists)
+  Print "are you sure you   want to change the details"
+   Get changeAnswer
+   If (changeAnswer == Y) then details= newDetails
+   Else
+      Print"employee details you wnat to change "
+   Else
+      Print" details already in system"
+  ENDIF
+
+
+
+  
+
+
+      MOVE EVENT
+array calender =(01/10,02/01..........30/12,31/12)
+       DoWhile(day <364)
+        2021calender(day)=(" ")
+        EndDo
+  start
+    print "name of the event you want to move"
+        get eventName
+    Print"the date the evnt was scheduled to happen"
+        get evendate
+    print" the date you want to move the event to"
+         get newDate
+  If( eventName==enteredName AND the entered date is<=31) THEN
+    print "newDate"
+   ELSE
+   print "invalid"
+ endif        
+
