@@ -90,7 +90,7 @@ submitSuvey(name,age,gender,favProduct,customLike,customExp){
         GET customExp
         click "submit"
         if(all fields completed)
-            add name, age, gender, favProduct, customLike, customExp to database
+            write name, age, gender, favProduct, customLike, customExp to database
             customerStatus = customerStatus + 1
         else
             print""please complete all fields"
@@ -128,11 +128,11 @@ addStaffAcc(userName,empName,empSurname,empPosition,empID,ssNumber,bankDetails,s
         GET permissons
         click"submit"
         if (all field completed) AND permissons == "No"
-            add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
+            write userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
             print"new employee added"
             print"welcome to Ayesha Beauty creations " + username
         elseif (all field completed AND permissons == "Yes")
-            add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
+            write userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
             print"new administrator added"
             print"welcome to Ayesha Beauty creations " + username
         else 
@@ -187,7 +187,7 @@ addReview(verifyCode){
         remove verifyCode from database
         write review
         click"submit"
-        add review to database 
+        write review to database 
     else
         print"invalid code"
     endif
