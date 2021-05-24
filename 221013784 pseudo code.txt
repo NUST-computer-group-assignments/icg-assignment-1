@@ -1,39 +1,79 @@
 
 
-array calander =[01/01,02/01,...,30/12,31/12]
-    day = 0
-    DOWHILE (day<364)
-        2021calender(day) = ("")
-        day = day + 1
-    enddo
+start
+    calender()
 end
 
-assignTask()        
 start
-	click "assign task"
+    assignTask(userName,taskType,dueDate)
+end
+
+start
+    addEvent(eventDate,eventName)
+end 
+
+start
+    addEvent(eventDate,eventName)
+end 
+
+
+Start
+    addStaffAcc(userName,empName,empSurname,empPosition,empID,ssNumber,bankDetails,salary,DoE)
+end
+
+
+start 
+    updateStockCodes(stockID,newID)
+end
+
+
+start
+    updateProductDescript(adminPass)
+end
+
+
+start
+    addReview(verifyCode)
+end
+
+
+
+caleder(){
+array cal =[01/01,02/01,...,30/12,31/12]
+    day = 0
+    DOWHILE (day<364)
+        calender(day) = ("")
+        day = day + 1
+    enddo
+}endfunction
+
+
+assignTask(userName,taskType,dueDate){
+    click "assign task"
     open task form
-	print "Enter employee username" 
+    print "Enter employee username" 
     GET userName
     print "enter task type"
     GET taskType
     print " enter the task due date dd/mm"
     GET dueDate
     assign = concat empName + " " + task type
-    calander(at dueDate insert(assign))
-end 
+    scheduling.caleder(at dueDate insert(assign))
+}endfunction
 
-addEvent()
-start
+
+addEvent(eventDate,eventName){
     print"event date dd/mm?"
     GET eventDate
     print"name of the event?" 
     GET eventName
-    empty_calender(at eventDate insert eventName)
-end
+    scheduling.caleder(eventDate,eventName)
+}endfunction
 
-submitSuvey()
-start
-    customerStatus = 0
+
+
+
+submitSuvey(name,age,gender,favProduct,customLike,customExp){
     click "do survey"
     if( customerStatus < 1)
         print"what is your name and surname?"
@@ -58,10 +98,11 @@ start
          print"sorry you have already completed a survey"
         endif
     endif
-end        
+ }endfunction      
 
-addStaffAcc()
-start
+
+
+addStaffAcc(userName,empName,empSurname,empPosition,empID,ssNumber,bankDetails,salary,DoE){
     print"add username"
     GET userName
     if (username is in employee database)
@@ -90,7 +131,7 @@ start
             add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
             print"new employee added"
             print"welcome to Ayesha Beauty creations " + username
-        elseif (all field completed) AND permissons == "Yes"
+        elseif (all field completed AND permissons == "Yes")
             add userName, empName, empSurname, empPosition, empID, ssNumber, bankDetails, salary, DoE, permissons to employee database
             print"new administrator added"
             print"welcome to Ayesha Beauty creations " + username
@@ -98,11 +139,10 @@ start
             print"complete all fields"
         endif
     endif
+}endfunction
 
-end
-    
-updateStockCodes()
-start
+
+updateStockCodes(stockID,newID){
     click "change stockcode"
     print"enter code you want to change."
     GET stockID
@@ -119,10 +159,10 @@ start
         stockID = newID
         endif
     endif
-end
+}endfunction
 
-updateProductDescript()
-start
+
+updateProductDescript(adminPass){
     click"edit product"
     print"This action requires administrative access"
     print"enter admin password"
@@ -134,13 +174,12 @@ start
     else
         print"wrong password"
     endif
-end
+}endfunction
 
-addReview()
-start 
+addReview(verifyCode){
     click"add review"
     click"verify purchase"
-    print"ënter product verification code."
+    print"enter product verification code."
     GET verifyCode
     if(verifyCode is in product database )
         rewardsPoints =rewardsPoints + 5
@@ -152,4 +191,5 @@ start
     else
         print"invalid code"
     endif
-end
+}endfunction
+
