@@ -6,43 +6,42 @@ What we have is a website with a customer and staff side. On the customer side i
 On the staff side there will be an option to login as an employee or as an admin(only the boss and it people). Here the employees have a tool to schedule  other employees. In the scheduler they can set events like for example a meeting or team building event. Employees can also set deadline reminders in the scheduler . People who have access to admin accounts are able to set deadline for other employees they are also able to add or remove employees /their information. They can also add or remove products from the customer side of the site and mark somethibg in or out of stock.
 Note this *not* an online selling website they continue to sell through their distributors
 
-modules: staff,customers,scheduling,products
+modules: Staff,Customers,Scheduling,Products
 
-- staff:This module groups togethere all the functions which are actions employees can take on the website.
-- customer:This module groups togethere all the functions which are actions customers can take on the website.
-- scheduling: This is all the functions that effect the scheduler.
-- products: This is all the functions that effect product like updating product description.
+- Staff:This module groups togethere all the functions which are actions employees can take on the website.
+- Customer:This module groups togethere all the functions which are actions customers can take on the website.
+- Scheduling: This is all the functions that effect the scheduler.
+- Products: This is all the functions that effect product like updating product description.
 
 funtions:
 
-- employees login
-- administrative login
-- add employee account to system(admin)
-- update employee details.
-- remove employee account(admin)
-- admin log out
-- delete review(admin)
-- Broadcast announcements (to both employees and customers)
-- customer log in
-- customer log out
-- customer create account
-- customer delete account
-- submit review
-- submit survey
-- update stock codes.
-- delete the stock codes.
-- add product description.
-- update product description
-- add product
-- remove product
-- certify unique item code
-- mark in stock
-- mark out of stock
-- decrease rewards points
-- add event (eg. meeting)
-- remove event
-- move event
-- add deadline
-- remove deadline
-- assign task
+- employeesLogin()
+- administrativeLogin()
+- addStaffAcc()
+- updateStaffdetails()
+- removeStaffAcc()
+- adminLogOut()
+- deleteReview()
+- broadcastAnnouncements()
+- custLogIn()
+- custLogOut()
+- custCreateAcc()
+- custDeleteAcc()
+- submitReview()
+- submitSurvey()
+- updateStockCodes()
+- deleteStockCodes()
+- addProductDescript()
+- updateProductDescript()
+- addProduct()
+- removeProduct()
+- InStock()
+- outOfStock()
+- claimRewardsPoints()
+- addEvent ()
+- removeEvent()
+- moveEvent()
+- addDeadline()
+- removeDeadline()
+- assignTask()
  
