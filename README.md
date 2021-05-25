@@ -45,3 +45,7 @@ funtions:
 - removeDeadline()
 - assignTask()
  
+Part B 
+
+for the site open the index.html file in a browser and click any of the buttons this was done by 221013784
+the customer relation database for the website was made by the rest of the group.
