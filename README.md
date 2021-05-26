@@ -47,5 +47,5 @@ funtions:
  
 Part B 
 
-for the site open the index.html file in a browser and click any of the buttons this was done by 221013784
+for the customer site open the index.html file in a browser and for the employee site open employee login.html or admin page.html and click any of the buttons this was done by 221013784.
 the customer relation database for the website was made by the rest of the group.
